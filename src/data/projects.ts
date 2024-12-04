@@ -44,7 +44,7 @@ export const projects = [
       'https://images.unsplash.com/photo-1576089172869-4f5f6f315620?auto=format&fit=crop&q=80&w=1280',
     ],
     details: {
-      period: 'Dec 2021 - Feb 2022',
+      period: 'June 2023 - Feb 2024',
       team: ['Solo Project'],
       stack: ['HTML/CSS', 'Javascript', 'Django', 'Python', 'Google Analytics'],
       features: [
@@ -55,8 +55,7 @@ export const projects = [
       ],
     },
     links: {
-      live: 'https://metrohealthinsurance.com',
-      github: 'https://github.com/PyungkangHong094/metro-health',
+      live: 'https://www.metrohealthins.com/contact-us/',
       description:
         'Metro Health Insurance platform revolutionizes the insurance industry with its modern approach to policy management and client engagement. The system features a robust admin panel for policy management, integrated marketing tools for client acquisition, and comprehensive analytics for business intelligence. Built with scalability in mind, it serves both insurance providers and clients with an intuitive interface and powerful backend capabilities.',
     },
