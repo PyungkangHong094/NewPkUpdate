@@ -589,9 +589,6 @@ export const projects = [
       },
       successMetrics: {
         marketReach: 92,
-        conversion: 65,
-        retention: 89,
-        growth: 78
       }
     },
     links: {

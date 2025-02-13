@@ -1,7 +1,7 @@
-import React from 'react';
-import { ProfileCard } from './ProfileCard';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import React from "react";
+import { ProfileCard } from "./ProfileCard";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export function ProfilePage() {
   return (

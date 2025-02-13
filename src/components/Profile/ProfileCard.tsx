@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export function ProfileCard() {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-md mx-auto">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
       <div className="flex flex-col items-center space-y-6">
         {/* Profile Image */}
         <div className="relative">
@@ -54,6 +54,48 @@ export function ProfileCard() {
           <Mail className="w-5 h-5" />
           <span>pyungkanghong094@gmail.com</span>
         </a>
+
+        {/* Section Title */}
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white text-center">
+          "최우선적으로 강조해야하는 프로젝트 매니저의 필수"
+        </h2>
+
+        {/* Three Circles Section */}
+        <div className="flex flex-col md:flex-row gap-6 mt-4 w-full max-w-3xl">
+          {/* First Circle */}
+          <div className="flex-1">
+            <div className="bg-red-500 rounded-full aspect-square flex flex-col items-center justify-center p-6 text-white">
+              <h3 className="font-bold text-lg mb-2">문예창작·</h3>
+              <h3 className="font-bold text-lg mb-2">문화서비스산업 전공</h3>
+              <p className="text-sm text-center">
+                논리와 감성을 담아낸 짜임새 있는 글쓰기를 지원합니다.
+              </p>
+            </div>
+          </div>
+
+          {/* Second Circle */}
+          <div className="flex-1">
+            <div className="bg-gray-400 rounded-full aspect-square flex flex-col items-center justify-center p-6 text-white">
+              <h3 className="font-bold text-lg mb-2">사용자의 목소리에</h3>
+              <h3 className="font-bold text-lg mb-2">소홀하지 않기</h3>
+              <p className="text-sm text-center">
+                사용자 시나리오를 우선적으로 고려하여 최선의 해결책을
+                고민합니다.
+              </p>
+            </div>
+          </div>
+
+          {/* Third Circle */}
+          <div className="flex-1">
+            <div className="bg-black rounded-full aspect-square flex flex-col items-center justify-center p-6 text-white">
+              <h3 className="font-bold text-lg mb-2">최대한의 소통,</h3>
+              <h3 className="font-bold text-lg mb-2">최소한의 참견</h3>
+              <p className="text-sm text-center">
+                자신의 '모름'을 인정하고 팀원들과 협력하는 제너럴리스트입니다.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

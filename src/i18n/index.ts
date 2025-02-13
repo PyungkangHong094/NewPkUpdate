@@ -8,8 +8,8 @@ i18n.use(initReactI18next).init({
     en: { translation: en },
     kr: { translation: kr }
   },
-  lng: localStorage.getItem('language') || 'en',
-  fallbackLng: 'en',
+  lng: localStorage.getItem('language') || 'kr',
+  fallbackLng: 'kr',
   interpolation: {
     escapeValue: false
   }
