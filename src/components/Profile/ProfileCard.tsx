@@ -65,10 +65,11 @@ export function ProfileCard() {
           {/* First Circle */}
           <div className="flex-1">
             <div className="bg-red-500 rounded-full aspect-square flex flex-col items-center justify-center p-6 text-white">
-              <h3 className="font-bold text-lg mb-2">문예창작·</h3>
-              <h3 className="font-bold text-lg mb-2">문화서비스산업 전공</h3>
+              <h3 className="font-bold text-lg mb-2">기술창작·</h3>
+              <h3 className="font-bold text-lg mb-2">컴퓨터 공학 전공</h3>
               <p className="text-sm text-center">
-                논리와 감성을 담아낸 짜임새 있는 글쓰기를 지원합니다.
+                사람의 시대: <br></br>사람이 더 살기 좋아진 시대라서 좋은 기술을
+                연구합니다
               </p>
             </div>
           </div>
@@ -79,7 +80,7 @@ export function ProfileCard() {
               <h3 className="font-bold text-lg mb-2">사용자의 목소리에</h3>
               <h3 className="font-bold text-lg mb-2">소홀하지 않기</h3>
               <p className="text-sm text-center">
-                사용자 시나리오를 우선적으로 고려하여 최선의 해결책을
+                사용자 시나리오를 우선적으로 고려하여<br></br> 최선의 해결책을
                 고민합니다.
               </p>
             </div>
@@ -91,7 +92,8 @@ export function ProfileCard() {
               <h3 className="font-bold text-lg mb-2">최대한의 소통,</h3>
               <h3 className="font-bold text-lg mb-2">최소한의 참견</h3>
               <p className="text-sm text-center">
-                자신의 '모름'을 인정하고 팀원들과 협력하는 제너럴리스트입니다.
+                자신의 '모름'을 인정하고<br></br> 팀원들과 협력하는
+                제너럴리스트입니다.
               </p>
             </div>
           </div>
