@@ -1,20 +1,22 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
-import { AnimatedSection } from './AnimatedSection';
 
 export function ProjectDetail() {
+  const { t, i18n } = useTranslation();
   const { id } = useParams();
   const project = projects.find(p => p.id === id);
+  const currentLang = i18n.language as 'en' | 'kr';
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center dark:bg-gray-900">
+      <div className="min-h-screen flex items-center justify-center bg-[#1e2124]">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4 dark:text-white">Project not found</h1>
-          <Link to="/" className="text-blue-600 dark:text-blue-400 hover:underline">
-            Return to homepage
+          <h1 className="text-2xl font-bold mb-4 text-white">{t('projects.notFound')}</h1>
+          <Link to="/" className="text-blue-400 hover:text-blue-300">
+            {t('projects.returnHome')}
           </Link>
         </div>
       </div>
@@ -22,33 +24,35 @@ export function ProjectDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-[#1e2124] text-white">
       <div className="container mx-auto px-4 py-12">
         {/* Back Button */}
         <Link
           to="/"
-          className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8"
+          className="inline-flex items-center text-gray-400 hover:text-white mb-8"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Projects
+          {t('navigation.back')}
         </Link>
 
         {/* Project Header */}
-        <AnimatedSection className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{project.title}</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {project.description}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white mb-4">
+            {project.title[currentLang]}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            {project.description[currentLang]}
           </p>
-        </AnimatedSection>
+        </div>
 
         {/* Screenshots */}
-        <AnimatedSection className="mb-16">
+        <div className="mb-16">
           <div className="flex overflow-x-auto gap-6 pb-4 -mx-4 px-4">
             {project.screenshots.map((screenshot, index) => (
               <img
                 key={index}
                 src={screenshot}
-                alt={`${project.title} screenshot ${index + 1}`}
+                alt={`${project.title[currentLang]} screenshot ${index + 1}`}
                 className={`object-cover rounded-lg shadow-lg flex-none ${
                   project.type === 'web'
                     ? 'w-[800px] h-[450px]'
@@ -57,94 +61,112 @@ export function ProjectDetail() {
               />
             ))}
           </div>
-        </AnimatedSection>
+        </div>
 
-        {/* Project Details */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Links and Description */}
-          <AnimatedSection>
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-semibold mb-6 dark:text-white">Links</h2>
-              <ul className="space-y-3 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {/* Left Column - Main Card: Links & About */}
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl shadow-lg border border-gray-700/50 overflow-hidden">
+            {/* Links Section */}
+            <div className="p-8 border-b border-gray-700/50">
+              <h2 className="text-2xl font-semibold mb-6 text-white">{t('projectDetails.links')}</h2>
+              <div className="space-y-4">
                 {Object.entries(project.links).map(([key, value]) => (
-                  key !== 'description' && (
-                    <li key={key}>
-                      <a
-                        href={value}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
-                      >
-                        {key === 'github' ? (
-                          <Github className="w-4 h-4 mr-2" />
-                        ) : (
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                        )}
-                        {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}
-                      </a>
-                    </li>
-                  )
+                  <div key={key}>
+                    <a
+                      href={value}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300"
+                    >
+                      {key === 'github' ? (
+                        <Github className="w-4 h-4 mr-2" />
+                      ) : (
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                      )}
+                      {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* About Section */}
+            <div className="p-8">
+              <h2 className="text-2xl font-semibold mb-6 text-white">{t('projectDetails.about')}</h2>
+              <p className="text-gray-300 leading-relaxed">
+                {project.details.about[currentLang]}
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column - Main Card: Project Details */}
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl shadow-lg border border-gray-700/50 overflow-hidden">
+            {/* Period Section */}
+            <div className="p-8 border-b border-gray-700/50">
+              <h3 className="text-lg font-medium text-white mb-4">{t('projectDetails.period')}</h3>
+              <p className="text-gray-300">{project.details.period[currentLang]}</p>
+            </div>
+
+            {/* Team Section */}
+            <div className="p-8 border-b border-gray-700/50">
+              <h3 className="text-lg font-medium text-white mb-4">{t('projectDetails.team')}</h3>
+              <div className="space-y-4">
+                {project.details.team.map((member, index) => (
+                  <div key={index} className="bg-gray-700/30 rounded-lg p-4">
+                    <h4 className="font-medium text-white mb-2">{member.role[currentLang]}</h4>
+                    <p className="text-gray-300 text-sm">{member.responsibilities[currentLang]}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tech Stack Section */}
+            <div className="p-8 border-b border-gray-700/50">
+              <h3 className="text-lg font-medium text-white mb-4">{t('projectDetails.techStack')}</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.details.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 bg-gray-700 text-gray-200 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Key Features Section */}
+            <div className="p-8">
+              <h3 className="text-lg font-medium text-white mb-4">{t('projectDetails.features')}</h3>
+              <ul className="space-y-3">
+                {project.details.features[currentLang].map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3"></span>
+                    <span className="text-gray-300">{feature}</span>
+                  </li>
                 ))}
               </ul>
-              {project.links.description && (
-                <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-3">About</h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {project.links.description}
-                  </p>
-                </div>
-              )}
             </div>
-          </AnimatedSection>
+          </div>
+        </div>
 
-          {/* Details */}
-          <AnimatedSection>
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-semibold mb-6 dark:text-white">Project Details</h2>
-              <dl className="space-y-6">
-                <div>
-                  <dt className="font-medium text-gray-900 dark:text-white mb-2">Period</dt>
-                  <dd className="text-gray-600 dark:text-gray-300">{project.details.period}</dd>
+        {/* Success Metrics */}
+        <div className="max-w-7xl mx-auto mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {Object.entries(project.details.successMetrics).map(([key, value]) => (
+              <div
+                key={key}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-gray-700/50 text-center"
+              >
+                <div className="text-3xl font-bold text-blue-400 mb-2">
+                  {value}%
                 </div>
-                <div>
-                  <dt className="font-medium text-gray-900 dark:text-white mb-2">Team</dt>
-                  <dd className="text-gray-600 dark:text-gray-300">
-                    <ul className="list-disc list-inside space-y-1">
-                      {Array.isArray(project.details.team) 
-                        ? project.details.team.map((member, index) => (
-                            <li key={index}>{member}</li>
-                          ))
-                        : <li>{project.details.team}</li>
-                      }
-                    </ul>
-                  </dd>
+                <div className="text-sm text-gray-300">
+                  {t(`projectDetails.metrics.${key}`)}
                 </div>
-                <div>
-                  <dt className="font-medium text-gray-900 dark:text-white mb-2">Tech Stack</dt>
-                  <dd className="flex flex-wrap gap-2">
-                    {project.details.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-medium text-gray-900 dark:text-white mb-2">Key Features</dt>
-                  <dd>
-                    <ul className="list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300">
-                      {project.details.features.map((feature) => (
-                        <li key={feature}>{feature}</li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-              </dl>
-            </div>
-          </AnimatedSection>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

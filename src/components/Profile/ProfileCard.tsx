@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function ProfileCard() {
   return (
@@ -9,7 +9,7 @@ export function ProfileCard() {
         <div className="relative">
           <div className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-gray-100 dark:ring-gray-700">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E35AQGS_O4ZlET9OA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1704483107835?e=1733634000&v=beta&t=q_VQsDRE9d_BfGzmSpEbDj99qUU4CCbWFTKkW5NMA7U"
+              src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbObFN4%2FbtsMiuTWJbK%2F77EHSP6GScdWomxPgbF6ik%2Fimg.jpg"
               alt="Pyungkang Hong"
               className="w-full h-full object-cover"
             />
@@ -18,8 +18,12 @@ export function ProfileCard() {
 
         {/* Name */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Pyungkang Hong</h2>
-          <p className="text-gray-600 dark:text-gray-300 mt-1">Developer & Project Manager</p>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+            Pyungkang Hong
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-1">
+            Developer & Project Manager
+          </p>
         </div>
 
         {/* Social Links */}

@@ -1,20 +1,39 @@
 {
   "header": {
     "title": "ThinkPM 프로젝트",
-    "subtitle": "세심한 주의와 현대적인 기술로 제작된 웹 및 모바일 프로젝트와 차트 지표 및 전략 개발을 선보입니다"
+    "subtitle": "사람의 시대 : 기술이 빠르게 변하면 그 기술을 사람이 잘 쓰도록 만드는 시대라고 생각하는 사람입니다 "
+  },
+  "navigation": {
+    "back": "프로젝트 목록으로",
+    "viewProfile": "프로필 보기"
   },
   "projects": {
-    "web": "프로젝트",
+    "web": "웹 프로젝트",
     "app": "앱 프로젝트",
     "viewDetails": "자세히 보기",
-    "back": "프로젝트 목록으로",
-    "details": {
-      "title": "프로젝트 상세",
-      "period": "기간",
-      "team": "팀",
-      "stack": "기술 스택",
-      "features": "주요 기능",
-      "links": "링크"
+    "notFound": "프로젝트를 찾을 수 없습니다",
+    "returnHome": "홈으로 돌아가기"
+  },
+  "projectDetails": {
+    "links": "링크",
+    "about": "소개",
+    "period": "기간",
+    "team": "팀",
+    "techStack": "기술 스택",
+    "features": "주요 기능",
+    "metrics": {
+      "targetAudience": "목표 고객",
+      "userGoals": "사용자 목표",
+      "engagement": "참여도",
+      "retention": "유지율",
+      "marketFit": "시장 적합성",
+      "adoption": "도입률",
+      "download": "다운로드",
+      "satisfaction": "만족도",
+      "impact": "영향력",
+      "marketReach": "시장 도달률",
+      "conversion": "전환율",
+      "growth": "성장률"
     }
   }
 }

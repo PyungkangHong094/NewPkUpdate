@@ -1,16 +1,27 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Project } from '../types';
 
 interface ProjectCardProps {
   type: 'web' | 'app';
-  title: string;
-  description: string;
+  title: {
+    en: string;
+    kr: string;
+  };
+  description: {
+    en: string;
+    kr: string;
+  };
   imageUrl: string;
   projectUrl: string;
 }
 
 export function ProjectCard({ type, title, description, imageUrl, projectUrl }: ProjectCardProps) {
+  const { i18n, t } = useTranslation();
+  const currentLang = i18n.language as 'en' | 'kr';
+
   return (
     <div className={`group ${
       type === 'web' ? 'w-full max-w-2xl' : 'w-full max-w-xs'
@@ -44,7 +55,7 @@ export function ProjectCard({ type, title, description, imageUrl, projectUrl }: 
           }`}>
             <img
               src={imageUrl}
-              alt={title}
+              alt={title[currentLang]}
               className="w-full h-full object-cover"
             />
             
@@ -54,7 +65,7 @@ export function ProjectCard({ type, title, description, imageUrl, projectUrl }: 
                 to={projectUrl}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-full font-medium transform -translate-y-2 group-hover:translate-y-0 transition-all duration-300"
               >
-                View Details
+                {t('projects.viewDetails')}
                 <ExternalLink className="w-4 h-4" />
               </Link>
             </div>
@@ -64,8 +75,12 @@ export function ProjectCard({ type, title, description, imageUrl, projectUrl }: 
 
       {/* Project Info */}
       <div className="mt-6 text-center">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300">{description}</p>
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {title[currentLang]}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-300">
+          {description[currentLang]}
+        </p>
       </div>
     </div>
   );
