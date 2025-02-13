@@ -260,6 +260,7 @@ export const projects = [
       }
     },
     links: {
+      web: "https://chartq.app/",
       figma: 'https://www.figma.com/design/vPnVbj3rBttZvcBplhQLx8/CHARTQ?node-id=0-1&t=8KahQpHmbRXdQLFY-1'
     }
   },
@@ -670,13 +671,13 @@ export const projects = [
       },
       about: {
         en: 'ChartGet revolutionizes chart analysis education with its innovative mobile platform, combining comprehensive learning resources with interactive tools.',
-        kr: '차트겟은 종합적인 학습 리소스와 인터랙티브 도구를 결합한 혁신적인 모바일 플랫폼으로 차트 분석 교육을 혁신합니다.'
+        kr: '차트겟은 기본적인 금융 학습을 할 수 있는 차트 공부 앱, '
       },
       successMetrics: {
-        marketReach: 92,
+        marketReach: 70,
         conversion: 65,
-        retention: 89,
-        growth: 78
+        retention: 80,
+        growth: 70
       }
     },
     links: {
