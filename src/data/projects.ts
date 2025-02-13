@@ -10,7 +10,7 @@ export const projects = [
     },
     description: {
       en: 'Comprehensive ERP system for kitchen and bath interior design management',
-      kr: '노션 템플렛 자동화 욕실 인테리어 디자인 관리를 위한 종합 ERP 시스템'
+      kr: '노션 템플렛 자동화 | 욕실 인테리어 디자인 관리를 위한 종합 ERP 시스템'
     },
     imageUrl: 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb8oM34%2FbtsMhxDSyv8%2FsFj2iikHkUUj9Tb2KFiXJ0%2Fimg.png',
     projectUrl: '/project/0',
@@ -47,16 +47,16 @@ export const projects = [
           'Inventory and procurement management'
         ],
         kr: [
-          '인테리어 디자인 프로젝트 관리',
-          '자동화 - 인사 및 급여 관리',
+          '프로그램 설계 및 프로젝트 관리',
+          '노션 - 내부 시스템 관리 자동화',
           '자동화 - 재무 및 회계 통합',
-          '자동화 - 고객 관계 관리 (CRM)',
+          '웹 어드민 페이지 고객 관계 관리 (CRM)',
           '디지털 자산 및 자료 관리',
         ]
       },
       about: {
-        en: 'D2 Design and Works’ ERP system streamlines kitchen and bath interior design workflows. It provides project management tools for tracking schedules, budgets, and resources while integrating HR, payroll, and financial accounting. The CRM module enhances client communication, and the system efficiently manages digital assets and procurement for seamless operations.',
-        kr: '지속적인 업무의 자동화 시스템을 얹어서 ERP 시스템은 키친 및 욕실 인테리어 디자인 워크플로우를 최적화하고  프로젝트별 일정, 예산, 리소스를 효과적으로 관리할 수 있으며, 인사·급여 및 재무 회계를 통합하여 운영의 효율성을 높이는것을 초점을 두었습니다 또한, CRM 모듈을 통해 클라이언트와의 커뮤니케이션을 강화하고, 디지털 자산 및 구매 관리를 체계적으로 운영할 수 있도록 지원을 작업함'
+        en: 'The ERP system focuses on optimizing the workflow for kitchen and bathroom interior design, helping to effectively manage project schedules, budgets, and resources. We have developed a support automation program that streamlines operations. Additionally, by utilizing the CRM module, we enhance client communication and enable systematic management of digital assets and procurement. In particular, a continuous workflow automation system has been implemented to reduce repetitive tasks, ensuring more efficient project execution.',
+        kr: 'ERP 시스템은 키친 및 욕실 인테리어 디자인 워크플로우를 최적화하는 데 초점을 맞추고 프로젝트별 일정, 예산, 리소스를 효과적으로 관리할 수있게 운영을 돕는 서포트 자동화프로그램을 작업을 진행했습니다. 또한, CRM 모듈을 활용해 클라이언트와의 커뮤니케이션을 더욱 원활하게 만들고, 디지털 자산과 구매 관리를 체계적으로 운영할 수 있도록 지원합니다. 특히, 지속적인 업무 자동화 시스템을 적용하여 반복 작업을 줄이고, 보다 효율적인 프로젝트 운영이 가능하도록 설계되었습니다'
       },
       successMetrics: {
         satisfaction: 92,
@@ -159,6 +159,7 @@ export const projects = [
       stack: ['HTML/CSS', 'Javascript', 'Django', 'Python', 'Google Analytics'],
       features: {
         en: [
+          'BM analytics',
           'Auto SNS platform support',
           'Insurance policy management',
           'Client portal',
@@ -166,6 +167,7 @@ export const projects = [
           'Analytics dashboard'
         ],
         kr: [
+          '경쟁 비지니스 모델 분석',
           '자동화 SNS 디지털홍보',
           '보험 정책 사용자 관리 CRM',
           '고객 포털',
@@ -175,7 +177,7 @@ export const projects = [
       },
       about: {
         en: 'Metro Health Insurance platform revolutionizes the insurance industry with its modern approach to policy management and client engagement. The system features a robust admin panel for policy management, integrated marketing tools for client acquisition, and comprehensive analytics for business intelligence. Built with scalability in mind, it serves both insurance providers and clients with an intuitive interface and powerful backend capabilities.',
-        kr: 'Metro Health Insurance 플랫폼은 현대적인 정책 관리 및 고객 관여 방식을 통해 쉽게 다가가게합니다.관리자 패널을 통해 정책을 효율적으로 운영할 수 있게 설계했으며 고객 유치를 위한 통합 마케팅 도구와 비즈니스 확장'
+        kr: 'Metro Health Insurance 플랫폼은 현대적인 정책 관리 및 고객 관여 방식을 통해 쉽게 다가가게합니다. 설계관리자 패널을 통해 정책을 효율적으로 운영할 수 있게 설계했으며 고객 유치를 위한 통합 마케팅 도구와 비즈니스 확장'
       },
       successMetrics: {
         marketReach: 70,
@@ -230,7 +232,7 @@ export const projects = [
         },
         {
           role: { en: 'UI/UX Designer', kr: 'UI/UX 디자이너' },
-          responsibilities: { en: 'Hyemin Choi', kr: '최혜민' }
+          responsibilities: { en: 'Lee Dahae', kr: '이다혜' }
         }
       ],
       stack: ['Flutter', 'Supabase', 'Pine Script', 'Python', 'SQLite/Hive', 'Chart.js'],
@@ -438,6 +440,7 @@ export const projects = [
     },
     links: {
       live: 'https://moceanpt.com/',
+      notion: 'https://workcnt.notion.site/Mocean-Health-Checking-19969006d967800fbf4fe641738888cf',
       github: 'https://github.com/PyungkangHong094/MOCEAN'
     }
   },
