@@ -153,7 +153,7 @@ export const projects = [
       team: [
         {
           role: { en: 'Cooperation Project', kr: '협업 프로젝트' },
-          responsibilities: { en: 'Development and deployment', kr: '시장분석, 디지털마케팅, 개발 협업' }
+          responsibilities: { en: 'Risk management, Digital Marketing Specialist', kr: '리스크 매니징, 디지털마케팅, 개발 협업' }
         }
       ],
       stack: ['HTML/CSS', 'Javascript', 'Django', 'Python', 'Google Analytics'],
