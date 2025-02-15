@@ -22,12 +22,12 @@ export const projects = [
     details: {
       period: {
         en: 'Nov 2022 - March 2024',
-        kr: '2022년 11월 - 2024년 4월'
+        kr: '2022년 11월 - 2024년 1월'
       },
       team: [
         {
           role: {
-            en: 'Co-Onwer - 홍평강',
+            en: 'Freelance Devloper Conslutant Pyungkang Hong',
             kr: '협업 개발 및 시스템 작업 - 홍평강'
           },
           responsibilities: {
@@ -289,7 +289,7 @@ export const projects = [
     details: {
       period: {
         en: 'Aug 2022 - May 2023',
-        kr: '2022년 8월 - 2023년 5월'
+        kr: '2022년 8월 - 2023년 6월'
       },
       team: [
         {
@@ -377,7 +377,7 @@ export const projects = [
     details: {
       period: {
         en: 'Mar 2021 - May 2021',
-        kr: '2021년 3월 - 2021년 5월'
+        kr: '2021년 3월 - 2021년 12월'
       },
       team: [
         {

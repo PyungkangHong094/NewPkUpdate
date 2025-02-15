@@ -68,7 +68,7 @@ export function ProfileCard() {
               <h3 className="font-bold text-lg mb-2">기술창작·</h3>
               <h3 className="font-bold text-lg mb-2">컴퓨터 공학 전공</h3>
               <p className="text-sm text-center">
-                사람의 시대: <br></br>사람이 더 살기 좋아진 시대라서 좋은 기술을
+                사람의 시대: <br></br>사람이 더 살기 좋도록, 삶에 좋은 기술을
                 연구합니다
               </p>
             </div>
@@ -92,8 +92,7 @@ export function ProfileCard() {
               <h3 className="font-bold text-lg mb-2">최대한의 소통,</h3>
               <h3 className="font-bold text-lg mb-2">최소한의 참견</h3>
               <p className="text-sm text-center">
-                자신의 '모름'을 인정하고<br></br> 팀원들과 협력하는
-                제너럴리스트입니다.
+                자신의 '모름'을 인정하고 팀원들과 협력하는 사람입니다.
               </p>
             </div>
           </div>
