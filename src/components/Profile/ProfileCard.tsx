@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { BoxIcon, Github, Linkedin, Mail, Notebook } from "lucide-react";
 
 export function ProfileCard() {
   return (
@@ -28,6 +28,22 @@ export function ProfileCard() {
 
         {/* Social Links */}
         <div className="flex space-x-6">
+          {/* <a
+            href="https://www.notion.so/chartq/19969006d96780ed8024c43a3e86419d"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+          >
+            <Notion className="w-6 h-6" />
+          </a> */}
+          <a
+            href="https://www.notion.so/chartq/19969006d96780ed8024c43a3e86419d"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+          >
+            <BoxIcon className="w-6 h-6" />
+          </a>
           <a
             href="https://github.com/PyungkangHong094"
             target="_blank"
